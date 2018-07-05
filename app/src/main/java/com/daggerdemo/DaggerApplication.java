@@ -16,7 +16,12 @@ public class DaggerApplication extends Application implements HasActivityInjecto
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerAppComponent.builder().application(this).build().inject(this);
+        //Call the inject function after you build the project.
+        DaggerAppComponent
+                .builder()
+                .application(this)
+                .build()
+                .inject(this);
     }
 
     @Override
