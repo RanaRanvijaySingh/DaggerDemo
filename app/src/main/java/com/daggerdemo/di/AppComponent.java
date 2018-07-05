@@ -7,6 +7,8 @@ import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 
+//Step 2: Create interface AppComponent
+
 /**
  * This interface is implemented by Dagger when you build the project.
  * The name of the class with be with "Dagger" prefix and the "InterfaceName".
