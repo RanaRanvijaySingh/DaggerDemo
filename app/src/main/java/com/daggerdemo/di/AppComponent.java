@@ -5,7 +5,7 @@ import com.daggerdemo.DaggerApplication;
 
 import dagger.BindsInstance;
 import dagger.Component;
-import dagger.android.AndroidInjectionModule;
+import dagger.android.support.AndroidSupportInjectionModule;
 
 //Step 2: Create interface AppComponent
 
@@ -14,7 +14,10 @@ import dagger.android.AndroidInjectionModule;
  * The name of the class with be with "Dagger" prefix and the "InterfaceName".
  * eg. for this interface generated class will be: "DaggerAppComponent"
  */
-@Component(modules = AndroidInjectionModule.class)
+@Component(modules = {
+        AndroidSupportInjectionModule.class,
+        //Step 3: Add activity builder
+        ActivityBuilder.class})
 public interface AppComponent {
 
     @Component.Builder
